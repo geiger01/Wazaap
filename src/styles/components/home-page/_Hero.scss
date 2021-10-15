@@ -9,21 +9,36 @@
     h1 {
         font-family: Lato bold, sans-serif;
         color: #f0eeee;
-        font-size: 5.625rem;
+        font-size: 3.2rem;
+
+        @include for-tablet {
+            font-size: 4.2rem;
+        }
+        @include for-large-tablet {
+            font-size: 4.625rem;
+        }
     }
 
     h4 {
         font-family: Lato regular, sans-serif;
-        font-size: 1.25rem;
+        font-size: 0.7rem;
+        padding: 0.2rem;
         color: $txt-gray-color;
-        line-height: 1.8;
+        line-height: 1.5;
+
+        @include for-phone {
+            font-size: 1rem;
+        }
+        @include for-tablet {
+            font-size: 1.2rem;
+        }
     }
 
     .try-it-out-btn {
         @include flex-center;
         margin-top: 2rem;
         font-family: Lato regular, sans-serif;
-        padding: 0.8rem 2.1rem;
+        padding: 0.8rem 1.6rem;
         color: white;
         border: none;
         font-size: 1.5rem;
@@ -35,6 +50,23 @@
 
         &:hover {
             box-shadow: 0px 4px 195px 71px rgba(69, 128, 252, 0.34);
+        }
+    }
+
+    .hero-img {
+        width: 350px;
+
+        @include for-phone {
+            width: 400px;
+        }
+        @include for-large-phone {
+            width: 630px;
+        }
+        @include for-tablet {
+            width: 800px;
+        }
+        @include for-large-tablet {
+            width: 1100px;
         }
     }
 }
