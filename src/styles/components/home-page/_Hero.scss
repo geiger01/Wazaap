@@ -1,0 +1,40 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+
+    h1 {
+        font-family: Lato bold, sans-serif;
+        color: #f0eeee;
+        font-size: 5.625rem;
+    }
+
+    h4 {
+        font-family: Lato regular, sans-serif;
+        font-size: 1.25rem;
+        color: $txt-gray-color;
+        line-height: 1.8;
+    }
+
+    .try-it-out-btn {
+        @include flex-center;
+        margin-top: 2rem;
+        font-family: Lato regular, sans-serif;
+        padding: 0.8rem 2.1rem;
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+        border-radius: 40px;
+        background: #4580FC;
+        box-shadow: 0px 4px 147px 24px rgba(69, 128, 252, 0.34);
+
+        transition: 0.5s;
+
+        &:hover {
+            box-shadow: 0px 4px 195px 71px rgba(69, 128, 252, 0.34);
+        }
+    }
+}

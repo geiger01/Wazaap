@@ -1,0 +1,51 @@
+.main-nav {
+    font-family: Lato regular, sans-serif;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    .main-nav-links {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .logo,
+        .logo-dot-container {
+            font-size: 1.3rem;
+            @include flex-center;
+            gap: 10px;
+
+            .logo-dot {
+                width: 22px;
+                border-radius: 50%;
+                height: 22px;
+
+                background: linear-gradient(
+                    180deg,
+                    rgba(120, 154, 224, 0.86) 0.39%,
+                    #4577E0 99.98%,
+                    rgba(39, 88, 190, 0.0742218) 99.99%
+                );
+                box-shadow: 0px 4px 41px 13px rgba(54, 104, 209, 0.32);
+            }
+        }
+
+        .create-account-btn {
+            background: rgba(69, 127, 252, 0.068);
+            color: $txt-gray-color;
+            border: 0.2px solid rgba(85, 85, 85, 0.527);
+            font-size: 1.2rem;
+            border-radius: 50px;
+            padding: 0.8rem 1.3rem;
+            box-shadow: 0px -38px 250px 126px rgba(69, 128, 252, 0.17);
+
+            transition: 0.5s;
+
+            &:hover {
+                box-shadow: 0px -38px 250px 229px rgba(69, 128, 252, 0.17);
+                color: rgb(197, 197, 197);
+            }
+        }
+    }
+}
