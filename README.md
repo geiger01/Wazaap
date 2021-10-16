@@ -1,4 +1,4 @@
-WhatsApp inpired app, built with react, SASS and firebase.
+WhatsApp inspired  app, built with react, SASS and firebase.
 
 Live Site: https://wazaap-23488.web.app/
 
