@@ -10,7 +10,6 @@ import { RiLogoutCircleLine, RiMessage3Line } from "react-icons/ri";
 export const ChatRoom = () => {
 
     const messagesRef = firebaseService.firestore.collection('messages')
-
     const query = messagesRef.orderBy('createdAt').limit(25)
 
     const [messages] = useCollectionData(query, { idField: 'id' })
@@ -51,15 +50,13 @@ export const ChatRoom = () => {
                             <RiLogoutCircleLine />
                         </button>
                     </div>
-                    <div className="chat-room-side-rooms">
-                        <h2>Chat Rooms</h2>
-                    </div>
+
                 </div>
 
                 <div className="chat-content-container">
 
                     <div className="chat-room-top">
-                        <h2>Your Room</h2>
+                        <h2>The World's Room</h2>
                     </div>
                     <div className="chat-messages-container">
                         {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
