@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Header = () => {
+export const Header = ({ signInWithGoogle }) => {
     return (
         <header className="main-layout">
             <nav className="main-nav">
@@ -9,7 +9,7 @@ export const Header = () => {
                         <div className="logo-dot"></div>
                         <h3>Wazaap</h3>
                     </li>
-                    <button className="create-account-btn">Create Account</button>
+                    <button onClick={signInWithGoogle} className="create-account-btn">Login With Google</button>
                 </ul>
             </nav>
         </header>

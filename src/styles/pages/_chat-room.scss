@@ -1,0 +1,90 @@
+.chat-room-page {
+    @include flex-center;
+    font-family: Lato regular, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    .chat-room {
+        position: relative;
+        display: flex;
+        min-height: 90vh;
+        background-color: #1A1C22;
+        width: 80%;
+        border-radius: 12px;
+
+        box-shadow: 0px 4px 41px 13px rgba(69, 82, 109, 0.068);
+
+        .logout-btn {
+            font-size: 1.7rem;
+            position: absolute;
+            bottom: 30px;
+            background: transparent;
+            border: none;
+            @include flex-center;
+            color: rgb(240, 168, 100);
+            left: 50%;
+            transform: translate(-50%);
+
+            transition: 0.3s;
+
+            &:hover {
+                color: rgb(212, 93, 38);
+            }
+        }
+
+        .chat-room-side-nav {
+            position: absolute;
+            width: 80px;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            border-right: 3px solid #cfcfcf07;
+
+            .logo-dot {
+                position: absolute;
+                left: 50%;
+                top: 30px;
+                transform: translate(-50%);
+                width: 22px;
+                border-radius: 50%;
+                height: 22px;
+
+                background: linear-gradient(
+                    180deg,
+                    rgba(120, 154, 224, 0.86) 0.39%,
+                    #4577E0 99.98%,
+                    rgba(39, 88, 190, 0.0742218) 99.99%
+                );
+                box-shadow: 0px 4px 41px 13px rgba(54, 104, 209, 0.32);
+            }
+        }
+
+        .chat-room-side-rooms {
+            position: absolute;
+            left: 80px;
+            top: 0;
+            bottom: 0;
+            width: 270px;
+            border-right: 3px solid #cfcfcf07;
+
+            & h2 {
+                color: #D8D8D8;
+                margin-top: 28px;
+                margin-left: 30px;
+            }
+        }
+
+        .chat-room-top {
+            position: absolute;
+            left: 350px;
+            right: 0;
+            border-bottom: 3px solid #cfcfcf07;
+            height: 85px;
+
+            & h2 {
+                color: #D8D8D8;
+                margin-top: 28px;
+                margin-left: 60px;
+            }
+        }
+    }
+}
