@@ -1,0 +1,61 @@
+.message {
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    .message-content {
+        box-sizing: border-box;
+        border-radius: 3px;
+        padding: 0.5rem 1rem;
+        min-width: 6.5rem;
+        max-width: 60%;
+    }
+
+    &.sent {
+        justify-content: flex-end;
+        .message-details {
+            position: absolute;
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+
+            bottom: -1.5rem;
+
+            & img {
+                display: none;
+            }
+        }
+
+        .message-content {
+            background: #20262D;
+            border: 1px solid #283036;
+        }
+    }
+
+    .time-sent {
+        font-size: 0.8rem;
+        align-self: flex-end;
+    }
+
+    &.received {
+        .message-details {
+            position: absolute;
+            gap: 10px;
+            display: flex;
+            align-items: center;
+
+            bottom: -1.5rem;
+            left: -1.3rem;
+
+            & img {
+                width: 20px;
+                border-radius: 50%;
+            }
+        }
+    }
+    .message-content {
+        background: #24252D;
+        border: 1px solid #282932;
+    }
+}
