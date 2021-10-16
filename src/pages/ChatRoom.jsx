@@ -10,7 +10,7 @@ import { RiLogoutCircleLine, RiMessage3Line } from "react-icons/ri";
 export const ChatRoom = () => {
 
     const messagesRef = firebaseService.firestore.collection('messages')
-    const query = messagesRef.orderBy('createdAt').limit(25)
+    const query = messagesRef.orderBy('createdAt')
 
     const [messages] = useCollectionData(query, { idField: 'id' })
 
